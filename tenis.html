@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Deals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: #222;
+            color: white;
+            padding: 15px 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        .nav-links li {
+            position: relative;
+        }
+        .nav-links li span, .nav-links li a {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links li a.cta {
+            background: #d32f2f;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        .nav-links li a.cta:hover {
+            background: #b71c1c;
+        }
+        .hero-content {
+            text-align: center;
+            padding: 60px;
+            background: url('C:/Users/USER/Downloads/TENIS/hero-sneakers.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .hero-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .btn {
+            background: #d32f2f;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .btn:hover {
+            background: #b71c1c;
+        }
+        .offers {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .offers img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        #mision, #vision, #valores {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 400px;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .close-btn {
+            background: #d32f2f;
+            color: white;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleSection(id) {
+            let section = document.getElementById(id);
+            section.style.display = section.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="C:/Users/USER/Downloads/TENIS/Logo.png" alt="Logo de Sneaker Deals">
+            </div>
+            <ul class="nav-links">
+                <li><span onclick="toggleSection('mision')">Misión</span></li>
+                <li><span onclick="toggleSection('vision')">Visión</span></li>
+                <li><span onclick="toggleSection('valores')">Valores</span></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#comprar" class="cta">Compra Ahora</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Diseñado para los amantes de los Sneakers</h1>
+            <p>Las mejores marcas y precios accesibles en un solo lugar.</p>
+            <a href="#comprar" class="btn">Explorar Sneakers</a>
+        </div>
+    </section>
+    <section class="offers">
+        <img src="C:/Users/USER/Downloads/TENIS/oferta1.jpg" alt="Oferta 1">
+        <img src="C:/Users/USER/Downloads/TENIS/oferta2.jpg" alt="Oferta 2">
+        <img src="C:/Users/USER/Downloads/TENIS/oferta3.jpg" alt="Oferta 3">
+    </section>
+    <footer>
+        <p>Síguenos en:</p>
+        <a href="https://www.facebook.com/share/1B4XF1FQpn/?mibextid=wwXIfr" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/sneakers._21_la_mjor_obs/profilecard/?igsh=ZjczMHMwdWYwZTMy" target="_blank">Instagram</a>
+        <a href="#">Twitter</a>
+        <p>Contacto: contacto@sneakerdeals.com</p>
+    </footer>
+</body>
+</html>
